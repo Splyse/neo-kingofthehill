@@ -19,7 +19,7 @@ Additionally, an optional 'name' parameter can be passed as a fourth argument to
 In neo-python, to play with a 20-token transfer might look something like: 
 ```
 testinvoke ae27c2db78887cfb8960b2d87d31d9cdfdca4e82 transfer ['Adr3XjZ5QDzVJrWvzmsTTchpLRRGSzgS5A',
-'AK1nGHaL184ffGJkbs977VtafiP5hzXQ9j',2000000000,'Prince Humperdink']
+'AK1nGHaL184ffGJkbs977VtafiP5hzXQ9j',2000000000,'Prince Humperdinck']
 ```
 
 which will have the contract broadcast a `new_king` notification containing the optional name value name. But the name argument is optional, a regular transfer of tokens from Neon wallet or neo-python's `wallet tkn_send` command will still work if you don't care about the name notification message. (Note that the testinvoke in this case goes to the TUT token contract, not the game contract).
