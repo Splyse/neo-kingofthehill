@@ -5,7 +5,7 @@ The game is entirely self-contained inside the smart contract, there's no web or
 
 When a new king takes over, the contract sends the old king back all his tokens automatically, all in the same transaction.
 
-You can call the currentKing operation to get the scripthash of the current reigning king, and currentBounty to know the amount to knock him off of the throne. The game scripthash is 2d838efcda02e9b6bc42ce21ce34acad14b58923. So in neo-python, an invoke might look like:
+You can call the `currentKing` operation to get the scripthash of the current reigning king, and `currentBounty` to know the amount to knock him off of the throne. The game contract scripthash is `2d838efcda02e9b6bc42ce21ce34acad14b58923`. So in neo-python, an invoke might look like:
 
 ```
 testinvoke 2d838efcda02e9b6bc42ce21ce34acad14b58923 currentBounty []
@@ -22,4 +22,6 @@ testinvoke ae27c2db78887cfb8960b2d87d31d9cdfdca4e82 transfer ['Adr3XjZ5QDzVJrWvz
 'AK1nGHaL184ffGJkbs977VtafiP5hzXQ9j',2000000000,'Prince Humperdink']
 ```
 
-which will have the contract broadcast a `new_king` notification containing the optional name value name. But the name argument is optional, a regular transfer of tokens from Neon wallet or neo-python's `wallet tkn_send` command will still work if you don't care about the name notification message.
+which will have the contract broadcast a `new_king` notification containing the optional name value name. But the name argument is optional, a regular transfer of tokens from Neon wallet or neo-python's `wallet tkn_send` command will still work if you don't care about the name notification message. (Note that the testinvoke in this case goes to the TUT token contract, not the game contract).
+
+There is a Discord bot also included that can be used as a companion to the game, to announce new kings in a Discord channel, but it is not necessary to the function of the game.
