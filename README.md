@@ -1,7 +1,7 @@
 # neo-kingofthehill
 A King of the Hill smart contract example using Test Utility Token (TUT) on Neo TestNet.
 
-The game is entirely self-contained inside the smart contract, there's no web or middleware code. All you need to do to play the game is send an amount of TUT greater than the current bounty to the contract address, `AK1nGHaL184ffGJkbs977VtafiP5hzXQ9j`
+The game is entirely self-contained inside the smart contract, there's no web or middleware code required. All you need to do to play the game is send an amount of TUT greater than the current bounty to the contract address, **AK1nGHaL184ffGJkbs977VtafiP5hzXQ9j**
 
 When a new king takes over, the contract sends the old king back all his tokens automatically, all in the same transaction.
 
