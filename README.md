@@ -3,7 +3,7 @@ A King of the Hill smart contract example using Test Utility Token (TUT) on Neo 
 
 The game is entirely self-contained inside the smart contract, there's no web or middleware code required. All you need to do to play the game is send an amount of TUT greater than the current bounty to the contract address, **AK1nGHaL184ffGJkbs977VtafiP5hzXQ9j**
 
-When a new king takes over, the contract sends the old king back all his tokens automatically, all in the same transaction.
+When a new king takes over, the contract refunds all the old king's tokens automatically, all in the same transaction.
 
 You can call the `currentKing` operation to get the scripthash of the current reigning king, and `currentBounty` to know the amount to knock him off of the throne. The game contract scripthash is `2d838efcda02e9b6bc42ce21ce34acad14b58923`. So in neo-python, an invoke might look like:
 
